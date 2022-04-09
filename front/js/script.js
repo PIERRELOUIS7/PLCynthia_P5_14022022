@@ -57,3 +57,17 @@ const kanap = (array) => {
         article.appendChild(h3);
         //Récupération du texte des h3
         h3.textContent = product.name;
+        
+        /*Création de l'objet p*/
+        const p = document.createElement("p");
+        //La class productDescription est ajoutée au paragraphe p
+        p.classList.add("productDescription");
+        //les paragraphes sont les enfants des articles
+        article.appendChild(p);
+        //Récupération du texte de description
+        p.textContent = product.description;
+        }
+}
+
+/*onload pour exécuter le script après le chargement de la page*/
+window.onload = callProduct();
